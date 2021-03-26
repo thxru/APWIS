@@ -3143,15 +3143,9 @@ a.value-decrease::before {
 
 
 
------------------------------------------------------------------
-/*!
- * Project_Name: Weather
- * Author: Themezy
- * Email: contact[at]themezy.com
- * Url: http://www.themezy.com
- */
+
 /*=========================================== 
- * Importing CSS Libraries
+ * Weather
  *===========================================*/
 article,
 aside,
@@ -3357,7 +3351,7 @@ html {
   font-size: 14px; }
 
 body {
-  color: #bfc1c8;
+  color: #050505;
   font-family: "Roboto", "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -3371,7 +3365,7 @@ h1, h2, h3, h4, h5, h6 {
 
 hr {
   border: none;
-  border-bottom: 1px solid #777; }
+  border-bottom: 1px solid rgb(0, 0, 0); }
 
 ul, ol {
   margin: 0;
@@ -4272,7 +4266,7 @@ form textarea {
       margin-bottom: 5px;
       font-size: 16px;
       font-size: 1.1428571429em;
-      color: white; }
+      color: rgb(17, 16, 16); }
     .site-header .branding .site-description {
       font-size: 10px;
       font-size: 0.7142857143em;
@@ -4374,7 +4368,7 @@ form textarea {
 .forecast-container {
   width: 100%;
   background: hsla(135, 63%, 15%, 0.718);
-  background-image: url(https://wallpaperaccess.com/full/452582.jpg);
+  background-image: url(https://tse2.mm.bing.net/th?id=OIP.0B3gPiss5tiBn7vHpq4hFgHaEo&pid=Api&P=0&w=300&h=188);
   display: table;
   table-layout: fixed;
   width: 100%;
@@ -4431,7 +4425,7 @@ form textarea {
           display: block;
           width: 100%; } }
     .forecast-container .forecast .forecast-header {
-      background-image: url(https://i.pinimg.com/originals/38/e5/0f/38e50f85b7a2416ee73ade37a1db439e.jpg);
+      background-image: url(https://tse2.mm.bing.net/th?id=OIP.W-KOh-GZcQ9kDTcbZMIomgHaEo&pid=Api&P=0&w=295&h=185);
       padding: 10px;
       text-align: center;
       font-weight: 400; }
@@ -4445,7 +4439,7 @@ form textarea {
       .forecast-container .forecast .forecast-content .degree {
         font-size: 24px;
         font-size: 1.7142857143em;
-        color: rgb(255, 255, 255);
+        color: rgb(12, 14, 46);
         font-weight: 700; }
       .forecast-container .forecast .forecast-content small {
         font-size: 16px;
@@ -4457,7 +4451,7 @@ form textarea {
     font-size: 36px;
     font-size: 2.5714285714em;
     font-weight: 300;
-    color: white; }
+    color: rgb(90, 88, 88); }
 
 .filter {
   margin-bottom: 30px; }
@@ -4604,7 +4598,7 @@ form textarea {
   font-size: 13px;
   font-size: 0.9285714286em; }
   .breadcrumb a {
-    color: #bfc1c8; }
+    color: #3b3b3d; }
     .breadcrumb a:after {
       content: " ";
       display: inline-block;
@@ -4616,7 +4610,7 @@ form textarea {
     .breadcrumb a:hover {
       text-decoration: underline; }
   .breadcrumb span {
-    color: white; }
+    color: rgb(48, 46, 46); }
 
 .post {
   padding: 50px 0;
@@ -4629,7 +4623,7 @@ form textarea {
     font-size: 30px;
     font-size: 2.1428571429em;
     font-weight: 300;
-    color: white; }
+    color: rgb(15, 14, 14); }
   .post .featured-image {
     margin-bottom: 20px; }
     .post .featured-image img {
