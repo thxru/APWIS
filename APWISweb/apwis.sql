@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2021 at 08:50 AM
+-- Generation Time: Mar 29, 2021 at 06:45 PM
 -- Server version: 5.7.30-log
 -- PHP Version: 7.3.5
 
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `apwis`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `Name` varchar(40) NOT NULL,
+  `Email` varchar(40) NOT NULL,
+  `Subject` varchar(40) NOT NULL,
+  `Message` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -67,6 +80,24 @@ CREATE TABLE `pestschedule` (
   `Time` time NOT NULL,
   `Completed` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `client` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`client`, `password`) VALUES
+('admin', 'admin123');
 
 -- --------------------------------------------------------
 
