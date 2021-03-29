@@ -570,7 +570,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color:#e2e2e2;
 }
 .banner-area.bg-1 {
-	background: rgba(0, 0, 0, 0) url("assets/images/banners/5.jpg") no-repeat scroll center center / cover ;
+	background: rgba(0, 0, 0, 0) url("https://wallpaperaccess.com/full/137487.jpg")repeat scroll center center / cover ;
 }
 .banner-area.bg-2 {
 	background: rgba(0, 0, 0, 0) url("assets/images/banners/2.jpg") repeat scroll center center / cover ;
@@ -2571,28 +2571,28 @@ a.value-decrease::before {
 /*----------------------------------------*/
 /*  38. Gallery Details
 /*----------------------------------------*/
-.slider-for {
+.gallery-slider-for {
 	width:73.5%;
 	float:left;
 	padding-right:1.5%;
 }
-.slider-for img {
+.gallery-slider-for img {
 	height:535px;
 }
-.slider-nav {
+.gallery-slider-nav {
 	width:24%;
 	float:left;
 	padding-left:1%;
 }
-.slider-nav .slick-slide {
+.gallery-slider-nav .slick-slide{
 	float:none;
 	width:auto !important;
 }
-.single-nav {
-	margin-bottom:24px;
+.gallery-single-nav {
+	margin-bottom:20px;
 	cursor:pointer;
 }
-.single-nav:focus {
+.gallery-single-nav:focus {
 	outline:0;
 }
 .project-info {
@@ -5037,12 +5037,12 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 200px;
-  background-color: #f5f5f5;
+  background-color: none;
   font-family: 'Baloo Paaji 2', cursive;
 }
 
 .card2 {
-  background-color: #222831;
+  background-color: #bbc9dd48;
   height: 20rem;
   border-radius: 0;
   display: flex;
@@ -5131,7 +5131,7 @@ html, body {
   padding: 0.75em 2em;
   letter-spacing: 0.05rem;
   margin: 1em;
-  width: 13rem;
+  width: 8rem;
 }
 
 .btn-fill:focus {
@@ -5201,8 +5201,20 @@ html, body {
 }
  /*SHEDULE CONTANER--------------------------------------------------*/
  .water-container{
-   background: #02006d;
+  
+   width: 45%;
+ 
  }
  .fertilizer-container{
-   background: rgb(16, 119, 2);
+
+   width: 45%;
+ }
+ .shedule1{
+   background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+ }
+
+ 
+ .shedule2{
+  background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+ 
  }
