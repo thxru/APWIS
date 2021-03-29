@@ -336,31 +336,31 @@
 }
 .sidebar-menu {}
 /* gallery details */
-.slider-for {
+.gallery-slider-for {
 	width:auto;
 	float:none;
 	padding:0;
 }
-.slider-nav {
+.gallery-slider-nav {
 	width:100%;
 	height:135px !important;
 }
-.single-nav {
+.gallery-single-nav {
 	width:33% !important;
 	float:left !important;
 }
-.slider-nav .slick-slide {
+.gallery-slider-nav .slick-slide {
 	width:33% !important;
 	float:left !important;
 	padding:0 1%;
 }
-.slider-nav .slick-slide:first-child {
+.gallery-slider-nav .slick-slide:first-child {
 	padding-left:0;
 }
-.slider-nav .slick-slide:last-child {
+.gallery-slider-nav .slick-slide:last-child {
 	padding-right:0;
 }
-.slider-for img {
+.gallery-slider-for img {
 	height:auto;
 }
 .project-info {
