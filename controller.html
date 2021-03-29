@@ -8,6 +8,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="manifest" href="site.html">
 	<link rel="apple-touch-icon" href="icon.html">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -97,8 +98,8 @@
 										</ul>-->
 									</li>
 								
-									<li><a href="#">Gallery</a>
-										<!--<ul class="submenu">
+									<!--<li><a href="#">Gallery</a>
+										<ul class="submenu">
 											<li><a href="gallery.html">Gallery</a></li>
 											<li><a href="gallery-details.html">Gallery Details</a></li>
 										</ul>-->
@@ -147,21 +148,19 @@
 						</div>
 					</div>
 					
-					<div class="col-sm-2">
+					
 						<div class="search-and-cart">
-							<!--search-box-->
-							<div class="search search-box">
-								<i class="fa fa-search searching-icon"></i>
-								<div class="search-place">
-									<input type="text" placeholder="Search" />
-								</div>							
-							</div>	
+								
 							<!--LogIn-->
-							<form class="form-inline my-2 my-lg-0">
-								<button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="login.html" formtarget="_blank">Login</button>
+							<form class="loginform form-inline my-2 my-lg-0">
+								<button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="login.html" formtarget="_blank">Log In</button>
+							</form>
+							<!--LogIn-->
+							<form class="loginform form-inline my-2 my-lg-0">
+								<button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="index.html" formtarget="_blank">Log Out</button>
 							</form>	
-							</div>
 						</div>
+					
 					</div>
 				</div>
 			</div>
@@ -175,9 +174,7 @@
 	<!--service-area end-->
 	<div class="site-content">
 		<div class="site-header">
-			<div class="container">
-					<br><br><br><br><br><br>
-
+			<div class="container">					
 				    <!-- Default snippet for navigation -->
 		
 					<div class="forecast-table">
@@ -205,197 +202,376 @@
 </div>
 
 
-<br><br><br><br><br>
-<div class="container">
-	<input type="range" min="0" max="100" value="50" step="1" list="tickmarks" id="rangeInput" oninput="output.value = rangeInput.value">
-	<datalist id="tickmarks">
-	  <option value="0 to 20">0</option>
-	  <option>20</option>
-	  <option>40</option>
-	  <option>60</option>
-	  <option>80</option>
-	  <option>100</option>
-	</datalist>
-	<output id="output" for="rangeInput">50</output> <!-- Just to display selected value -->
-  </div>
-  <br><br><br><br><br> 
-<div class="container">
-
-  <h2>Water Motor</h2>
-  <label class="switch">
-	<input type="checkbox">
-	<span class="slider round"></span>
-  </label>
-  <br><br>
-  <h2>Fertilizer Motor</h2>
-  <label class="switch">
-	<input type="checkbox">
-	<span class="slider round"></span>
-  </label>
-  
-</div>
-<div class="container">
-<div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
-    <label class="onoffswitch-label" for="myonoffswitch">
-        <span class="onoffswitch-inner"></span>
-        <span class="onoffswitch-switch"></span>
-    </label>
-</div>
-</div>
-<br><br>
-<div  class="container">
-		<div class="testbox">
-			<form action="/">
-			<h1>Pharmacy Complaint Form</h1>
-			<div class="item">
-				<p>Complainant's Name</p>
-				<div class="name-item">
-				<input type="text" name="name" placeholder="First" />
-				<input type="text" name="name" placeholder="Last" />
-				</div>
-			</div>
-			<div class="item">
-				<p>Address</p>
-				<input type="text" name="name" placeholder="Street address"/>
-				<input type="text" name="name" placeholder="Street address line 2"/>
-				<div class="city-item">
-				<input type="text" name="name" placeholder="City" />
-				<input type="text" name="name" placeholder="Region" />
-				<input type="text" name="name" placeholder="Postal / Zip code" />
-				<select>
-					<option value="">Country</option>
-					<option value="1">Russia</option>
-					<option value="2">Germany</option>
-					<option value="3">France</option>
-					<option value="4">Armenia</option>
-					<option value="5">USA</option>
-				</select>
-				</div>
-			</div>
-			<div class="item">
-				<p>Email</p>
-				<input type="text" name="name"/>
-			</div>
-			<div class="item">
-				<p>Telephone number where you can be reached</p>
-				<input type="text" name="name"/>
-			</div>
-			<div class="item">
-				<p>Incident Date</p>
-				<input type="date" name="name" required/>
-				<i class="fas fa-calendar-alt"></i>
-			</div>
-			<div class="item">
-				<p>Incident Time</p>
-				<input type="time" name="name" required/>
-				<i class="fas fa-clock"></i>
-			</div>
-			<div class="item">
-				<p>What best describes the type of problem encountered</p>
-				<select>
-				<option value="">Please select</option>
-				<option value="1">Dispensing Error</option>
-				<option value="2">Illegal Dispensing</option>
-				<option value="3">Fraud</option>
-				<option value="4">Impairment/Diversion</option>
-				<option value="5">Unethical Conduct</option>
-				<option value="6">Regards Prescriber</option>
-				<option value="6">Other</option>
-				</select>
-			</div>
-			<div class="item">
-				<p>Pharmacy Personnel Involved</p>
-				<input type="text" name="name"/>
-			</div>
-			<div class="item">
-				<p>Pharmacy Involved</p>
-				<input type="text" name="name"/>
-			</div>
-			<div class="item">
-				<p>Complaint filed on behalf of</p>
-				<input type="text" name="name"/>
-			</div>
-			<div class="item">
-				<p>What happened? Be as specific as possible, including dates, names, etc.</p>
-				<textarea rows="5"></textarea>
-			</div>
-			<div class="btn-block">
-				<button type="submit" href="/">Send Complaint</button>
-			</div>
-			</form>
-		</div>
-	</div>
-<br><br>
-<div  class="container">
-<h2>Card</h2>
-
-<div class="card">
-	<div class="card-container">
-			<div class="container">
-				<h2>Water Motor</h2>
-				<label class="switch">
-				<input type="checkbox">
-				<span class="slider round"></span>
-				</label>
-			</div>
-		
-		<div class="container">
-			<h4><b>..</b></h4> 
-			<p></p> 
-		</div>
-	</div>
-</div>
-</div>
 <br><br><br>
 
-		<!--footer-area start-->
-		<footer class="footer-area">
-			<!--footer-top-->
-			<div class="footer-widgets">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-sm-6">
-							<div class="footer-widget">
-								<h4>About Company</h4>
-								<div class="about-widget">
-									<p>It is a long established fact that a reader will be distracted by readable content of a page when looking at layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.</p>
-								</div>
-							</div>
-						</div>
+
+<div class="bg">
+
+	<div class="threecard-container">
+		<div class="row 0">
+			<div class="col-md-4">
+				<div class="three-card">
 					
-						<div class="col-lg-4 col-sm-6">
-							<div class="footer-widget">
-								<h4>Instagram</h4>
-								<div class="instagram-imgages">
+					<div class="cardtext-container">
+						
+						<div class="forecast-container">
+							<div class="today forecast">
+								
+								<div class="forecast-content">
+									<div class="location">SOIL MOISTURE</div>
+									<br>
+									<div class="degree">
+										<div class="num"><label for="Soil Moisture">23<sup>o</sup>C</label></div>
+										<div class="forecast-icon">
+											<img src="assets/images/icons/soil.png" alt="" width=95>
+										</div>	
+									</div>
 									
-									<a href="#"><img src="assets/images/instagram/2.jpg" alt="instagram" /></a>
-									<a href="#"><img src="assets/images/instagram/3.jpg" alt="instagram" /></a>
-									<a href="#"><img src="assets/images/instagram/4.jpg" alt="instagram" /></a>
-									
-									<a href="#"><img src="assets/images/instagram/6.jpg" alt="instagram" /></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-sm-6">
-							<div class="footer-widget">
-								<h4>Working Hours</h4>
-								<div class="work-hours">
-									<ul class="list-none">
-										<li>Monday <span>07:00-17:00</span></li>
-										<li>Tuesday <span>07:00-17:00</span></li>
-										<li>Wednesday <span>07:00-17:00</span></li>
-										<li>Thursday <span>07:00-17:00</span></li>
-										<li>Friday <span>07:00-17:00</span></li>
-										<li>Saturday <span>07:00-17:00</span></li>
-										<li>Sunday <span>CLOSE</span></li>
-									</ul>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+
 			</div>
+			<div class="col-md-4">
+				<div class="three-card">
+					
+					<div class="cardtext-container">
+						
+						<div class="forecast-container">
+							<div class="today forecast">
+								 <!-- .forecast-header -->
+								<div class="forecast-content">
+									<div class="location">TEMPERATURE</div>
+									<br>
+									<div class="degree">
+										<div class="num"><label for="Soil Moisture">23<sup>o</sup>C</label></div>
+										<div class="forecast-icon">
+											<img src="assets/images/icons/temp.png" alt="" width=110>
+										</div>	
+									</div>
+								
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-md-4">
+				<div class="three-card">
+					
+					<div class="cardtext-container">
+					
+						<div class="forecast-container">
+							<div class="today forecast">
+								<!-- .forecast-header -->
+								<div class="forecast-content">
+									<div class="location">HUMIDITY</div>
+									<br>
+									<div class="degree">
+										<div class="num"><label for="Soil Moisture">23<sup>o</sup>C</label></div>
+										<div class="forecast-icon">
+											<img src="assets/images/icons/humidity.png" alt="" width=100>
+										</div>	
+									</div>
+									
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+<br>
+
+
+		
+<div class="card-container">
+	<div class="card2">
+	  
+	  <p class="card2__name">WATER CAPACITY</p>
+	  <br>
+	  <div class="grid-container">
+		<div class="grid-child-posts">
+			Full capacity:400ml
+		  </div>
+		  
+	
+	
+		<div class="onoffswitch" align="center">
+			<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+			<label class="onoffswitch-label" for="myonoffswitch">
+				<span class="onoffswitch-inner"></span>
+				<span class="onoffswitch-switch"></span>
+			</label>
+		</div>
+  
+	  </div>
+	 
+	  <button class="btn-fill draw-border">Fill</button>
+	  <button class="btn-fill draw-border">Stop</button>
+  
+	</div>
+	<div class="card2">
+	  
+		<p class="card2__name">FERTILIZER CAPACITY </p>
+		<br>
+		<div class="grid-container">
+	
+			<div class="grid-child-posts">
+				Full capacity:400ml
+			  </div>
+		  <div class="onoffswitch1">
+			  <input type="checkbox" name="onoffswitch1" class="onoffswitch1-checkbox" id="myonoffswitch1" tabindex="0" checked>
+			  <label class="onoffswitch1-label" for="myonoffswitch1">
+				  <span class="onoffswitch1-inner"></span>
+				  <span class="onoffswitch1-switch"></span>
+			  </label>
+		  </div>
+	
+		</div>
+	   
+		<button class="btn-fill draw-border">Fill</button>
+		<button class="btn-fill draw-border">Stop</button>
+	
+	  </div>
+	  <div class="card2">
+	  
+		<p class="card2__name">MOTOR STATUS</p>
+		<br>
+		<img src="assets/images/icons/111.png" alt="" width=80>
+		<br>
+		<div class="grid-container">
+	
+			<div class="grid-child-posts">
+				<b>Water Pump :</b>
+			</div>
+			  <label class="switch">
+				<input type="checkbox">
+				<span class="slider round"></span>
+			  </label>
+			 
+			  <div class="grid-child-posts">
+				<b>Fertilizer Pump :</b>
+			   </div>
+			  <label class="switch">
+				<input type="checkbox">
+				<span class="slider round"></span>
+			  </label>
+		</div>
+	
+		
+	   
+	
+	
+	  </div>
+</div>
+
+<br>
+
+
+  <br><br><br><br><br> 
+<!--*****************************Water shedule*****************************-->
+
+<br><br>
+<div  class="water-container">
+		<div class="testbox">
+			<form action="/">
+			<h1><b><center>Automatic Water Sheduling</center></b></h1>
+			<br><br><br>
+
+			<div class="item">
+				<div class="name-item">
+					<h2> Next shedule after:</h2>
+					<p class="timer" id="demo1"></p>
+				
+				</div>
+			</div>
+
+			<br><br>
+
+			<div class="item">
+				<div class="name-item">
+					<h2>Next Sheduled Time:</h2>
+					<label>Mar 28, 2021 15:37:25</label>
+				
+				</div>
+			</div>
+
+			<br><br>
+
+			<div class="item">
+				<div class="name-item days">
+					<h2>Sheduled Time Gap</h2>
+					<label>08:30:00</label>
+				
+				</div>
+			</div>
+			<br><br>
+
+			<button class="btn-edit" onclick="myFunction()">Reshedule</button>
+
+			<br><br><br>
+<!--Reshedule-->
+			<div id="myDIV">
+			
+				<div class="name-item">
+					<h2>Water Motor Status</h2>
+					<label class="switch">
+					  <input type="checkbox">
+					  <span class="slider round"></span>
+					</label>
+				
+				</div>
+
+				<div class="item">
+					<div class="name-item">
+						<h2>Water Filling Capacity (ml)</h2>
+						
+							<input type="range" min="0" max="200" value="100" step="1" list="tickmarks" id="rangeInput" oninput="output.value = rangeInput.value">
+							<datalist id="tickmarks">
+							<option value="0 to 50">0</option>
+							<option>50</option>
+							<option>100</option>
+							<option>150</option>
+							<option>200</option>
+							
+							</datalist>
+							<output id="output" for="rangeInput">100</output> <!-- Just to display selected value -->
+						
+					
+					</div>
+			   </div>
+					
+					
+				<div class="item">
+					<h2>Reshedule next date:</h2>
+					<input type="date" name="name" required/>
+					<i class="fas fa-calendar-alt"></i>
+				</div>
+				<div class="item">
+					<h2>Reshedule time:</h2>
+					<input type="time" name="name" required/>
+					<i class="fas fa-clock"></i>
+				</div>
+				<div class="item">
+					<h2>Reshedule time gap:</h2>
+					<input type="datetime" name="days" required/>
+					<i class="fas fa-clock"></i>
+				</div>
+				<div class="btn-block">
+					<button type="submit" href="/">SAVE</button>
+				</div>
+			</div>
+			</form>
+		</div>
+</div>
+<br><br>
+
+<br><br><br>
+<!--*****************************Fertilizer shedule*****************************-->
+<div  class="fertilizer-container">
+	<div class="testbox">
+		<form action="/">
+		<h1><b><center>Automatic Fertilizer Sheduling</center></b></h1>
+
+		<br><br><br>
+
+		<div class="item">
+			<div class="name-item">
+				<h2> Next shedule after:</h2>
+				<p class="timer" id="demo2"></p>
+			
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="item">
+			<div class="name-item">
+				<h2>Next Sheduled Time</h2>
+				<label>Mar 28, 2021 15:37:25</label>
+			
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="item">
+			<div class="name-item days">
+				<h2>Sheduled Time Gap</h2>
+				<label>14 days</label>
+			
+			</div>
+		</div>
+
+		<br><br>
+
+		<button class="btn-edit" onclick="myFunction2()">Reshedule</button>
+
+		<br><br><br>
+
+		<div id="myDIV2">
+		
+			<div class="name-item">
+				<h2>Fertilizer Motor Status</h2>
+				<label class="switch">
+				  <input type="checkbox">
+				  <span class="slider round"></span>
+				</label>
+			</div>
+			
+			
+			<div class="name-item">
+					<h2>Water Level Capacity (ml)</h2>
+					
+						<input type="range" min="0" max="200" value="100" step="1" list="tickmarks" id="rangeInput" oninput="output.value = rangeInput.value">
+						<datalist id="tickmarks">
+						<option value="0 to 50">0</option>
+						<option>50</option>
+						<option>100</option>
+						<option>150</option>
+						<option>200</option>
+						
+						</datalist>
+						<output id="output" for="rangeInput">100</output> <!-- Just to display selected value -->
+					
+				
+			</div>
+		   
+				
+				
+			<div class="item">
+					<h2>Reshedule next date:</h2>
+					<input type="date" name="name" required/>
+					<i class="fas fa-calendar-alt"></i>
+			</div>
+			<br>
+			<div class="item">
+					<h2>Reshedule time:</h2>
+					<input type="time" name="name" required/>
+					<i class="fas fa-clock"></i>
+			</div>
+			<br>
+			<div class="item">
+					<h2>Reshedule time gap:</h2>
+					<input type="datetime" name="days" required/>
+					<i class="fas fa-clock"></i>
+			</div><br>
+			<div class="btn-block">
+					<button type="submit" href="/">Save</button>
+			</div>
+		</div>
+		</form>
+	</div>
+</div>
+<br><br>
+
+
+		
 		<!--footer copyright-->
 		<div class="footer-copyright">
 			<div class="container">
@@ -410,7 +586,37 @@
 	<!--footer-area end-->
 
 
-
+  
+	<!-- modernizr js -->
+	<script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+	<!-- jquery-1.12.0 version -->
+	<script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
+	<!-- bootstra.min js -->
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- meanmenu js -->
+	<script src="assets/js/jquery.meanmenu.min.js"></script>
+	<!-- easing js -->
+	<script src="assets/js/jquery.easing.min.js"></script>
+	<!---venobox-js-->
+	<script src="assets/js/venobox.min.js"></script>
+	<!---slick-js-->
+	<script src="assets/js/slick.min.js"></script>
+	<!---waypoints-js-->
+	<script src="assets/js/waypoints.js"></script>
+	<!---counterup-js-->
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<!---isotop-js-->
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<!-- jquery-ui js -->
+	<script src="assets/js/jquery-ui.min.js"></script>
+	<!-- jquery.countdown js -->
+	<script src="assets/js/jquery.countdown.min.js"></script>
+	<!-- plugins js -->
+	<script src="assets/js/plugins.js"></script>
+	<!-- main js -->
+	<script src="assets/js/main.js"></script>
+	<!--countdown-->
+	<script src="assets/js/countdown.js"></script>
 
 
 </body>
