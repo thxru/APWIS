@@ -174,17 +174,17 @@ $(".qtybutton").on("click", function() {
 /*----------------------------
  gallery
 ------------------------------ */ 
-$('.slider-for').slick({
+$('.gallery-slider-for').slick({
   slidesToShow: 1,
-  asNavFor: '.slider-nav',
+  asNavFor: '.gallery-slider-nav',
   arrows: true,
   vertical: true,
   swipe:false
 });
 
-$('.slider-nav').slick({
+$('.gallery-slider-nav').slick({
   slidesToShow: 3,
-  asNavFor: '.slider-for',
+  asNavFor: '.gallery-slider-for',
   dots: false,
   focusOnSelect: true,
   vertical: true,
