@@ -1,102 +1,153 @@
-body {
-    background-image: url("https://wallpaperaccess.com/full/137487.jpg");
-    background-size: cover;
+
+
+body{
+	margin:0;
+	color:#d6f1e162;
+	background:#64cc7a80;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	background:url(https://wallpaperaccess.com/full/137487.jpg) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(50, 146, 117, 0.582);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:rgb(255, 255, 255);
+	border-color:#065506;
+}
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(185, 233, 185, 0.295);
+}
+.login-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:rgb(201, 201, 201);
+	font-size:12px;
+}
+.login-form .group .button{
+	background:#149c03;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(109, 180, 221, 0.829);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
 }
 
-.sq1 {
-    position: fixed;
-    padding-top: 3.5cm;
-    padding-left: 6cm;
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
 }
-
-#sqaure1 {
-    position: fixed;
-    transform-origin: center;
-    transform: rotateZ(44deg);
-    box-shadow: 1px 1px 5px 5px black;
-}
-
-.email {
-    z-index: 2000;
-    position: fixed;
-    padding-top: 8.5cm;
-    padding-left: 7.5cm;
-}
-
-.pass {
-    z-index: 1000;
-    position: fixed;
-    padding-top: 10.5cm;
-    padding-left: 7.5cm;
-}
-
-.submit {
-    position: fixed;
-    padding-top: 13cm;
-    padding-left: 11cm;
-}
-
-#txt {
-    color: white;
-    text-align: center;
-    position: fixed;
-    padding-top: 5cm;
-    padding-left: 9.5cm;
-    font-size: 48px;
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-#emailbox {
-    font-weight: bolder;
-    font-size: large;
-    width: 350px;
-    height: 30px;
-    opacity: 0.5;
-    padding: 5px;
-}
-
-#pwbox {
-    font-weight: bolder;
-    font-size: large;
-    width: 350px;
-    height: 30px;
-    opacity: 0.5;
-    padding: 5px;
-}
-
-#log {
-    font-weight: bolder;
-    font-size: large;
-    border-radius: 20%;
-    font-family: 'Times New Roman', Times, serif;
-    width: 3cm;
-    height: 60px;
-    background-color: black;
-    color: white;
-}
-
-#log:hover {
-    cursor: pointer;
-}
-
-.h1 {
-    padding-left: 18cm;
-    padding-top: 4cm;
-    line-height: 20px;
-    color: white;
-    text-align: center;
-}
-
-#heading1 {
-    padding-left: 9cm;
-    position: absolute;
-    font-size: 50px;
-}
-
-#text {
-    padding-left: 5.5cm;
-    padding-top: 3cm;
-    position: Absolute;
-    font-size: 25px;
+.foot-lnk{
+	text-align:center;
+	color: gainsboro;
 }
