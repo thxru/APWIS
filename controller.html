@@ -293,7 +293,7 @@
 	<div class="card2">
 	  
 	  <p class="card2__name">WATER CAPACITY</p>
-	  <br>
+	  <br><br><br>
 	  <div class="grid-container">
 		<div class="grid-child-posts">
 			Full capacity:400ml
@@ -310,15 +310,15 @@
 		</div>
   
 	  </div>
-	 
+	 <br><br>
 	  <button class="btn-fill draw-border">Fill</button>
-	  <button class="btn-fill draw-border">Stop</button>
+	  
   
 	</div>
 	<div class="card2">
 	  
 		<p class="card2__name">FERTILIZER CAPACITY </p>
-		<br>
+		<br><br><br>
 		<div class="grid-container">
 	
 			<div class="grid-child-posts">
@@ -333,9 +333,9 @@
 		  </div>
 	
 		</div>
-	   
+	   <br><br>
 		<button class="btn-fill draw-border">Fill</button>
-		<button class="btn-fill draw-border">Stop</button>
+	
 	
 	  </div>
 	  <div class="card2">
@@ -376,10 +376,11 @@
   <br><br><br><br><br> 
 <!--*****************************Water shedule*****************************-->
 
-<br><br>
+<div class="row" >
+	<div class="col-sm-1"></div>	
 <div  class="water-container">
 		<div class="testbox">
-			<form action="/">
+			<form action="/" class="shedule1">
 			<h1><b><center>Automatic Water Sheduling</center></b></h1>
 			<br><br><br>
 
@@ -469,13 +470,13 @@
 			</form>
 		</div>
 </div>
-<br><br>
 
-<br><br><br>
+<div class="col-sm-0.5"></div>
+
 <!--*****************************Fertilizer shedule*****************************-->
 <div  class="fertilizer-container">
 	<div class="testbox">
-		<form action="/">
+		<form action="/" class="shedule2">
 		<h1><b><center>Automatic Fertilizer Sheduling</center></b></h1>
 
 		<br><br><br>
@@ -549,24 +550,25 @@
 					<input type="date" name="name" required/>
 					<i class="fas fa-calendar-alt"></i>
 			</div>
-			<br>
+			
 			<div class="item">
 					<h2>Reshedule time:</h2>
 					<input type="time" name="name" required/>
 					<i class="fas fa-clock"></i>
 			</div>
-			<br>
+			
 			<div class="item">
 					<h2>Reshedule time gap:</h2>
 					<input type="datetime" name="days" required/>
 					<i class="fas fa-clock"></i>
-			</div><br>
+			</div>
 			<div class="btn-block">
 					<button type="submit" href="/">Save</button>
 			</div>
 		</div>
 		</form>
 	</div>
+</div>
 </div>
 <br><br>
 
