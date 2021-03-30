@@ -115,7 +115,7 @@
             <div class="form-v10-content">
                 <form class="form-detail" action="#" method="post" id="myform">
                     <div class="form-left">
-                        <h2>Login</h2>
+                        <!--<h2>Login</h2>
                        
                         <div class="form-row form-row-1">
                             <input type="text" name="username" class="nic" id="username" placeholder="username" required>
@@ -126,25 +126,25 @@
                         <br><br><br><br>
                         <div class="login-form form-row-last">
                             <input type="submit" name="login" class="login" value="Log In">
-                        </div>
+                        </div>-->
                     </div>
                     <div class="form-right">
-                        <h2>Sign Up</h2>
+                        <h2>Welcome ; }</h2>
                         <div class="form-row">
                             <input type="text" name="username" class="username" id="username" placeholder="Username" required>
                         </div>
                         <div class="form-row">
-                            <input type="text" name="password" class="password" id="password" placeholder="Password" required>
+                            <input type="password" name="password" class="password" id="password" placeholder="Password" required>
                         </div>
-                        <div class="form-row">
+                        <!--<div class="form-row">
                             <input type="text" name="confirmpassword" class="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
                         </div>
                         <div class="form-row">
                             <input type="text" name="email" id="email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
-                        </div>
+                        </div>-->
                         
                         <div class="form-row-last">
-                            <input type="submit" name="register" class="register" value="Register">
+                            <input type="submit" name="Login" class="register" value="LOGIN">
                         </div>
                     </div>
                 </form>
