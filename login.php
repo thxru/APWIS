@@ -45,15 +45,15 @@
     $password = "";
     $dbname = "apwis";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
-    if (isset($_REQUEST['//submit//'])) {
-        $nic = $_REQUEST['//nic//'];
-        $pass = $_REQUEST['pass'];
-        $query = "select * from users where //client='$nic' and password='$pass'//";
+    if (isset($_REQUEST['login'])) {
+        $name = $_REQUEST['username'];
+        $pass = $_REQUEST['password'];
+        $query = "select * from users where usernam='$name' and password='$pass'";
         $rs = mysqli_query($conn, $query);
         $rowcount = mysqli_num_rows($rs);
         if ($rowcount == 1) {
             echo '<script type="text/javascript">alert("WELCOME");</script>';
-            header('//location:index.html?//');
+            header('//location:index.php?//');
         } else {
             echo '<script type="text/javascript">alert("Please check your credentials");</script>';
         }
@@ -108,20 +108,22 @@
 			<div class="login-form">
 				<div class="sign-in-htm">
 					<div class="group">
-						<label for="user" class="label">Username</label>
-						<input id="user" type="text" class="input">
+						<label for="user" class="label" >Username</label>
+						<input type="text" id="user" class="input" name="username" required>
 					</div>
 					<div class="group">
-						<label for="pass" class="label">Password</label>
+						<label for="pass" class="label" name="password" required>Password</label>
 						<input id="pass" type="password" class="input" data-type="password">
 					</div>
-					<div class="group">
+					<!--<div class="group">
 						<input id="check" type="checkbox" class="check" checked>
 						<label for="check"><span class="icon"></span> Keep me Signed in</label>
-					</div>
-					<div class="group">
-						<input type="submit" class="button" value="Sign In">
-					</div>
+					</div>-->
+					<div class="container-login100-form-btn">
+                        <button class="login100-form-btn" name="submit">
+                            Login
+                        </button>
+                    </div>
 					<div class="hr"></div>
 					<div class="foot-lnk">
 						<a href="#forgot">Forgot Password?</a>
@@ -129,24 +131,26 @@
 				</div>
 				<div class="sign-up-htm">
 					<div class="group">
-						<label for="user" class="label">Username</label>
+						<label for="user" class="label" name="username" required>Username</label>
 						<input id="user" type="text" class="input">
 					</div>
 					<div class="group">
-						<label for="pass" class="label">Password</label>
+						<label for="pass" class="label" name="password" required>Password</label>
 						<input id="pass" type="password" class="input" data-type="password">
 					</div>
 					<div class="group">
-						<label for="pass" class="label">Repeat Password</label>
+						<label for="pass" class="label" name="Rpass" required>Repeat Password</label>
 						<input id="pass" type="password" class="input" data-type="password">
 					</div>
 					<div class="group">
-						<label for="pass" class="label">Email Address</label>
+						<label for="pass" class="label" name="email" required>Email Address</label>
 						<input id="pass" type="text" class="input">
 					</div>
-					<div class="group">
-						<input type="submit" class="button" value="Sign Up">
-					</div>
+					<div class="container-login100-form-btn">
+                        <button class="login100-form-btn" name="submit">
+                            Sign up
+                        </button>
+                    </div>
 				
 					<div class="foot-lnk">
 						<label for="tab-1">Already Member?</a>
