@@ -54,7 +54,7 @@
         $rowcount = mysqli_num_rows($rs);
         if ($rowcount == 1) {
             echo '<script type="text/javascript">alert("WELCOME");</script>';
-            header('location:index.php?user=$nic');
+            header('location:controller.html');
         } else {
             echo '<script type="text/javascript">alert("Please check your username & Password");</script>';
         }
@@ -131,7 +131,7 @@
                     <div class="form-right">
                         <h2>Welcome ; }</h2>
                         <div class="form-row">
-                            <input type="text" name="username" class="username" id="username" placeholder="Username" required>
+                            <input type="text" name="username" class="username" id="username"  placeholder="Username" required>
                         </div>
                         <div class="form-row">
                             <input type="password" name="password" class="password" id="password" placeholder="Password" required>
