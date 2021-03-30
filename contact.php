@@ -40,18 +40,17 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <?php
 
-$Name = $_REQUEST['name'];
-$Email = $_REQUEST['email'];
-$Subject = $_REQUEST['subject'];
-$Message = $_REQUEST['message'];
-
+$Name = isset($_REQUEST['name']) ? $_REQUEST['name'] : '';
+$Email =  isset($_REQUEST['email']) ? $_REQUEST['email'] : '';
+$Subject =  isset($_REQUEST['subject']) ? $_REQUEST['subject'] : '';
+$Message =  isset($_REQUEST['message']) ? $_REQUEST['message'] : '';
 
 $link = mysqli_connect("localhost", "root", "","apwis");
  
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
-if(isset($_REQUEST['form-submit'])){
+if(isset($_REQUEST['msgSubmit'])){
 
 $sql = "insert into contact (Name,Email,Subject,Message) values ('$Name','$Email','$Subject','$Message')";
 if(mysqli_query($link, $sql))
@@ -104,7 +103,7 @@ mysqli_close($link);
                         <div class="mainmenu text-center">
                             <nav>
                                 <ul>
-                                    <li><a href="index.html">Home</a>
+                                    <li><a href="index.php">Home</a>
                                         <!--<ul class="submenu">
 											<li><a href="index.html">Home Version 1</a></li>
 											<li><a href="index-2.html">Home Version 2</a></li>
@@ -233,22 +232,22 @@ mysqli_close($link);
                 </div>
                 <div class="col-lg-8 col-md-8 sm-mt-75">
                     <div class="contact-form style-3">
-                        <form id="contactForm" data-toggle="validator" method="POST" action="http://careeraid.net/html/garden-preview/assets/php/contact.php">
+                        <form id="contactForm" data-toggle="validator" method="POST" action="contact.php">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Name" id="name" required data-error="NEW ERROR MESSAGE" />
+                                    <input type="text" placeholder="Name" id="name" name="name" required data-error="NEW ERROR MESSAGE" required/>
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Email" id="email" />
+                                    <input type="text" placeholder="Email" id="email" name="email"required />
                                 </div>
                                 <div class="col-lg-12">
-                                    <input type="text" placeholder="Subject" id="subject" />
+                                    <input type="text" placeholder="Subject" id="subject" name="subject"required />
                                 </div>
                                 <div class="col-lg-12">
-                                    <textarea placeholder="Message" id="message"></textarea>
+                                    <textarea placeholder="Message" id="message" name="message" required></textarea>
                                 </div>
                                 <div class="col-lg-4">
-                                    <button class="btn-common" id="form-submit">Send message</button>
+                                    <input type="submit" name="submit" id="submit" value="Send message" >
                                 </div>
                                 <div class="col-lg-8 text-left pt-30">
                                     <div id="msgSubmit" class="hidden"></div>
