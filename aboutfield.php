@@ -65,8 +65,8 @@
 	  			</div>
 	  		</div>
 	  	</div>
-		<!--header-bottom-->
-		<div id="sticker" class="header-bottom">
+				<!--header-bottom-->
+				<div id="sticker" class="header-bottom">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-sm-2">
@@ -78,7 +78,7 @@
 						<div class="mainmenu text-center">
 							<nav>
 								<ul>
-									<li><a href="index.html">Home</a>
+									<li><a href="index.php">Home</a>
 										<!--<ul class="submenu">
 											<li><a href="index.html">Home Version 1</a></li>
 											<li><a href="index-2.html">Home Version 2</a></li>
@@ -103,8 +103,8 @@
 									</li>
 									<li><a href="#">Feild</a>
 										<ul class="submenu">
-											<li><a href="fieldmap.html">Field Maps</a></li>
-											<li><a href="aboutfield.html">About Feilds</a></li>
+											<li><a href="fieldmap.php">Field Maps</a></li>
+											<li><a href="aboutfield.php">About Feilds</a></li>
 											
 										</ul>
 									</li>
@@ -130,7 +130,7 @@
 											</li>
 										</ul>
 									</li>
-									<li><a href="about.html">About us</a>
+									<li><a href="about.php">About us</a>
 										<!--<ul class="submenu">
 											<li><a href="contact.html">Contact Us</a></li>
 											<li><a href="service-2.html">Service 2</a></li>
@@ -138,30 +138,31 @@
 										</ul>-->
 									</li>
 
-									<li><a href="contact.html">Contact Us</a></li>
+									<li><a href="contact.php">Contact Us</a></li>
 									
 								</ul>
 							</nav>
 						</div>
 					</div>
 					
+				
 					<div class="search-and-cart">
 								
 						<!--LogIn-->
 						<form class="loginform form-inline my-2 my-lg-0">
-							<button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="login.html" formtarget="_blank">Log In</button>
+							<button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="userPage.php" formtarget="_blank">Log In</button>
 						</form>
 						<!--LogIn-->
 						<form class="loginform form-inline my-2 my-lg-0">
-							<button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="index.html" formtarget="_blank">Log Out</button>
+							<button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="index.php" formtarget="_blank">Log Out</button>
 						</form>	
-					</div>
 					</div>
 				</div>
 			</div>
 		</div>
   	</header>
   	<!--header-area end-->
+
 	
 	<!--page-banner-area start-->
 	<div class="page-banner-area bg-5">

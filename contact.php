@@ -90,103 +90,103 @@ mysqli_close($link);
                 </div>
             </div>
         </div>
-        <!--header-bottom-->
-        <div id="sticker" class="header-bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-sm-2">
-                        <div class="logo">
-                            <a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-                        </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="mainmenu text-center">
-                            <nav>
-                                <ul>
-                                    <li><a href="index.php">Home</a>
-                                        <!--<ul class="submenu">
+		<!--header-bottom-->
+		<div id="sticker" class="header-bottom">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-sm-2">
+						<div class="logo">
+							<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="mainmenu text-center">
+							<nav>
+								<ul>
+									<li><a href="index.php">Home</a>
+										<!--<ul class="submenu">
 											<li><a href="index.html">Home Version 1</a></li>
 											<li><a href="index-2.html">Home Version 2</a></li>
 											<li><a href="index-3.html">Home Version 3</a></li>
 											<li><a href="index-4.html">Home Version 4</a></li>
 											<li><a href="index-5.html">Home Version 5</a></li>
 										</ul>-->
-                                    </li>
-                                    <li><a href="controller.html">Controller</a>
-                                        <!--<ul class="submenu">
+									</li>
+									<li><a href="controller.html">Controller</a>
+										<!--<ul class="submenu">
 											<li><a href="about.html">About Us</a></li>
 											<li><a href="coming-soon.html">Coming Soon</a></li>
 											<li><a href="404.html">Error 404</a></li>
 										</ul>-->
-                                    </li>
-
-                                    <!--<li><a href="#">Gallery</a>
+									</li>
+								
+									<!--<li><a href="#">Gallery</a>
 										<ul class="submenu">
 											<li><a href="gallery.html">Gallery</a></li>
 											<li><a href="gallery-details.html">Gallery Details</a></li>
 										</ul>-->
-                                    </li>
-                                    <li><a href="#">Feild</a>
-                                        <ul class="submenu">
-                                            <li><a href="fieldmap.html">Field Maps</a></li>
-                                            <li><a href="aboutfield.html">About Feilds</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Analytics</a>
-                                        <ul class="mega-menu">
-                                            <li class="megamenu-single">
-                                                <span class="mega-menu-title">Soil Moisture</span>
-                                                <ul>
-                                                    <li><a href="shop.html">Monthly</a></li>
-                                                    <li><a href="shop-full-width.html">Weekly</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="megamenu-single">
-                                                <span class="mega-menu-title">Humidity and Temperature</span>
-                                                <ul>
-                                                    <li><a href="shopping-cart.html">Monthly</a></li>
-                                                    <li><a href="checkout.html">Weekly</a></li>
-
-                                                </ul>
-                                            </li>
-                                            <li class="megamenu-single">
-                                                <img src="assets/images/ad/3.png" alt="" />
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="about.html">About us</a>
-                                        <!--<ul class="submenu">
+									</li>
+									<li><a href="#">Feild</a>
+										<ul class="submenu">
+											<li><a href="fieldmap.php">Field Maps</a></li>
+											<li><a href="aboutfield.php">About Feilds</a></li>
+											
+										</ul>
+									</li>
+									<li><a href="#">Analytics</a>
+										<ul class="mega-menu">
+											<li class="megamenu-single">
+												<span class="mega-menu-title">Soil Moisture</span>
+												<ul>
+													<li><a href="shop.html">Monthly</a></li>
+													<li><a href="shop-full-width.html">Weekly</a></li>
+												</ul>
+											</li>
+											<li class="megamenu-single">
+												<span class="mega-menu-title">Humidity and Temperature</span>
+												<ul>
+													<li><a href="shopping-cart.html">Monthly</a></li>
+													<li><a href="checkout.html">Weekly</a></li>
+													
+												</ul>
+											</li>
+											<li class="megamenu-single">
+												<img src="assets/images/ad/3.png" alt="" />
+											</li>
+										</ul>
+									</li>
+									<li><a href="about.php">About us</a>
+										<!--<ul class="submenu">
 											<li><a href="contact.html">Contact Us</a></li>
 											<li><a href="service-2.html">Service 2</a></li>
 											<li><a href="service-3.html">Service 3</a></li>
 										</ul>-->
-                                    </li>
+									</li>
 
-                                    <li><a href="contact.html">Contact Us</a></li>
-
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-                    <div class="search-and-cart">
-
-                        <!--LogIn-->
-                        <form class="loginform form-inline my-2 my-lg-0">
-                            <button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="login.html" formtarget="_blank">Log In</button>
-                        </form>
-                        <!--LogIn-->
-                        <form class="loginform form-inline my-2 my-lg-0">
-                            <button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="index.html" formtarget="_blank">Log Out</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </header>
-    <!--header-area end-->
+									<li><a href="contact.php">Contact Us</a></li>
+									
+								</ul>
+							</nav>
+						</div>
+					</div>
+					
+				
+					<div class="search-and-cart">
+								
+						<!--LogIn-->
+						<form class="loginform form-inline my-2 my-lg-0">
+							<button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="userPage.php" formtarget="_blank">Log In</button>
+						</form>
+						<!--LogIn-->
+						<form class="loginform form-inline my-2 my-lg-0">
+							<button class="btn btn-primary my-2 my-sm-0 btnLogin" type="submit" formaction="index.php" formtarget="_blank">Log Out</button>
+						</form>	
+					</div>
+				</div>
+			</div>
+		</div>
+  	</header>
+  	<!--header-area end-->
 
 
     <!--page-banner-area start-->
