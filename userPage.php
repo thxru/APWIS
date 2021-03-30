@@ -37,6 +37,9 @@
     <link rel="stylesheet" href="NewCSS/css/index-style.css">
     <!-- responsive css -->
     <link rel="stylesheet" href="NewCSS/assets/css/responsive.css">
+    <link rel="stylesheet" href="NewCSS/css/login-style.css">
+    <link rel="stylesheet" href="NewCSS/css/login-util.css">
+
     <?php
     $servername = "localhost";
     $username = "root";
@@ -53,7 +56,7 @@
             echo '<script type="text/javascript">alert("WELCOME");</script>';
             header('location:index.php?user=$nic');
         } else {
-            echo '<script type="text/javascript">alert("Please check your NIC & Password");</script>';
+            echo '<script type="text/javascript">alert("Please check your username & Password");</script>';
         }
     }
     mysqli_close($conn);
@@ -120,51 +123,26 @@
                         <div class="form-row form-row-3">
                             <input type="text" name="password" class="password" id="password" placeholder="Password" required>
                         </div>
-                        <div class="form-row-last">
-                            <input type="submit" name="Login" class="register" value="Login">
+                        <br><br><br><br>
+                        <div class="login-form form-row-last">
+                            <input type="submit" name="login" class="login" value="Log In">
                         </div>
                     </div>
                     <div class="form-right">
-                        <h2>Contact Details</h2>
+                        <h2>Sign Up</h2>
                         <div class="form-row">
-                            <input type="text" name="address" class="address" id="address" placeholder="Address" required>
-                        </div>
-                        <div class="form-row">
-                            <input type="text" name="street" class="street" id="street" placeholder="Street" required>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-row form-row-1">
-                                <input type="text" name="district" class="district" id="district" placeholder="District" required>
-                            </div>
-                            <div class="form-row form-row-2">
-                                <input type="text" name="zip" class="zip" id="zip" placeholder="Zip Code" required>
-                            </div>
+                            <input type="text" name="username" class="username" id="username" placeholder="Username" required>
                         </div>
                         <div class="form-row">
-                            <select name="Province">
-                            <option value="country">Province</option>
-                            <option value="Vietnam">Western Province</option>
-                            <option value="Malaysia">Southern Province</option>
-                            <option value="India">Eastern Province</option>
-                            <option value="country">Northern Province</option>
-                            <option value="Vietnam">North Western Province</option>
-                            <option value="Malaysia">North Central Province</option>
-                            <option value="India">Uva Province</option>
-                            <option value="country">Sabaragamuwa Province</option>
-                        </select>
-                            <span class="select-btn">
-                            <i class="zmdi zmdi-chevron-down"></i>
-                        </span>
+                            <input type="text" name="password" class="password" id="password" placeholder="Password" required>
                         </div>
-
+                        <div class="form-row">
+                            <input type="text" name="confirmpassword" class="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
+                        </div>
                         <div class="form-row">
                             <input type="text" name="email" id="email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Email">
                         </div>
-                        <div class="form-group">
-                            <div class="form-row form-row-3">
-                                <input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" required>
-                            </div>
-                        </div>
+                        
                         <div class="form-row-last">
                             <input type="submit" name="register" class="register" value="Register">
                         </div>
