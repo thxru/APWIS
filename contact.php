@@ -112,13 +112,6 @@ mysqli_close($link);
 											<li><a href="index-5.html">Home Version 5</a></li>
 										</ul>-->
 									</li>
-									<li><a href="controller.html">Controller</a>
-										<!--<ul class="submenu">
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="coming-soon.html">Coming Soon</a></li>
-											<li><a href="404.html">Error 404</a></li>
-										</ul>-->
-									</li>
 								
 									<!--<li><a href="#">Gallery</a>
 										<ul class="submenu">
