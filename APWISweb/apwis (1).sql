@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2021 at 06:45 PM
+-- Generation Time: Mar 30, 2021 at 06:43 AM
 -- Server version: 5.7.30-log
 -- PHP Version: 7.3.5
 
@@ -88,16 +88,17 @@ CREATE TABLE `pestschedule` (
 --
 
 CREATE TABLE `users` (
-  `client` varchar(50) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `email` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`client`, `password`) VALUES
-('admin', 'admin123');
+INSERT INTO `users` (`username`, `password`, `email`) VALUES
+('admin', 'admin123', 'admin@gmail.com');
 
 -- --------------------------------------------------------
 
