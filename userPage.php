@@ -43,10 +43,10 @@
     $password = "";
     $dbname = "apwis";
     $conn = mysqli_connect($servername, $username, $password, $dbname);
-    if (isset($_REQUEST['submit'])) {
-        $nic = $_REQUEST['nic'];
-        $pass = $_REQUEST['pass'];
-        $query = "select * from registration where nic='$nic' and pass='$pass'";
+    if (isset($_REQUEST['Login'])) {
+        $name = $_REQUEST['username'];
+        $pass = $_REQUEST['password'];
+        $query = "select * from users where username='$name' and password='$pass'";
         $rs = mysqli_query($conn, $query);
         $rowcount = mysqli_num_rows($rs);
         if ($rowcount == 1) {
@@ -112,23 +112,16 @@
             <div class="form-v10-content">
                 <form class="form-detail" action="#" method="post" id="myform">
                     <div class="form-left">
-                        <h2>Register</h2>
-                        <div class="form-group">
-                            <div class="form-row form-row-1">
-                                <input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required>
-                            </div>
-                            <div class="form-row form-row-2">
-                                <input type="text" name="last_name" id="last_name" class="input-text" placeholder="Last Name" required>
-                            </div>
-                        </div>
+                        <h2>Login</h2>
+                       
                         <div class="form-row form-row-1">
-                            <input type="text" name="nic" class="nic" id="nic" placeholder="NIC No" required>
+                            <input type="text" name="username" class="nic" id="username" placeholder="username" required>
                         </div>
                         <div class="form-row form-row-3">
                             <input type="text" name="password" class="password" id="password" placeholder="Password" required>
                         </div>
-                        <div class="form-row form-row-4">
-                            <input type="text" name="confirmpassword" class="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required>
+                        <div class="form-row-last">
+                            <input type="submit" name="Login" class="register" value="Login">
                         </div>
                     </div>
                     <div class="form-right">
