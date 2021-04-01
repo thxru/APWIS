@@ -257,7 +257,7 @@
                     </div>    
                     <div class="column column-12 md:column-8">
                         <h3 class="h4 text-primary">Configurable</h3>
-                        <p class="mb-2">Configure and customize MudPi to your specific garden needs providing personalized care.</p>
+                        <p class="mb-2">Configure and customize APWIS to your specific garden needs providing personalized care.</p>
                     </div>
                     
                 </div>
@@ -305,7 +305,7 @@
                     </div>    
                     <div class="column column-12 md:column-8">
                         <h3 class="h4 text-primary">Gather Garden Insights</h3>
-                        <p class="mb-2">Monitor and maintain your garden at peak efficiency with useful data such as soil moisture, weather, light intensity and more.</p>
+                        <p class="mb-2">Monitor and maintain your garden at peak efficiency with useful data such as soil moisture, weather, Humidity and more.</p>
                     </div> 
                 </div>
 
