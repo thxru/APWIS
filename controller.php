@@ -43,6 +43,25 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <?php
     require("database_connect.php");
+   
+
+if(isset($_REQUEST['save'])){
+    $ID=uniqid();
+    $WaterLvl =  isset($_REQUEST['WaterLvl']) ? $_REQUEST['WaterLvl'] : '';
+    $date =  isset($_REQUEST['date']) ? $_REQUEST['date'] : '';
+    $time =  isset($_REQUEST['time']) ? $_REQUEST['time'] : '';
+    $gap =  isset($_REQUEST['gap']) ? $_REQUEST['gap'] : '';
+
+$sqlQuery = "insert into waterschedule (WSID,Date,Duration,Amount,Time) values ('$ID','$WaterLvl','$date','$time','$gap')";
+if(mysqli_query($con, $sqlQuery))
+{
+    echo '<script type="text/javascript">alert("Your schedule was added successfully.");</script>';
+} 
+else
+{
+    echo '<script type="text/javascript">alert("ERROR: Could not able to execute.");</script>';
+}
+}
     $sql = "Select * from mainvalues where ID=(SELECT max(id) FROM mainvalues)";
     $result = mysqli_query($con,$sql);
     $sql3 = "Select WatM from motorstatus where mid=(SELECT max(mid) FROM motorstatus)";
@@ -315,13 +334,13 @@
                         <div class="grid-child-posts">
                             Full capacity:400ml
                         </div>
-                        <div class="onoffswitch" align="center">
-                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" <?php echo ($row['WaterLvl']=='0')?"checked":"checked" ;?>/>
-                            <label class="onoffswitch-label" for="myonoffswitch">
-				<span class="onoffswitch-inner"></span>
-				<span class="onoffswitch-switch"></span>
-			</label>
-                        </div>
+                        <div class="onoffswitch">
+   <input type="checkbox" name="onoffswitch1" class="onoffswitch-checkbox" id="myonoffswitch" <?php echo $row['WaterLvl'] == '0'?'checked':''; ?>>
+   <label class="onoffswitch-label" for="myonoffswitch1">
+     <span class="onoffswitch-inner"></span>
+     <span class="onoffswitch-switch"></span>
+   </label>
+</div> 
 
                     </div>
                     <br><br>
@@ -338,13 +357,13 @@
                         <div class="grid-child-posts">
                             Full capacity:400ml
                         </div>
-                        <div class="onoffswitch1">
-                             <input type="checkbox" name="onoffswitch1" class="onoffswitch1-checkbox" id="myonoffswitch1" tabindex="0" <?php echo ($row['PestLvl']=='0')?"checked":"checked" ;?> />
-                            <label class="onoffswitch1-label" for="myonoffswitch1">
-				  <span class="onoffswitch1-inner"></span>
-				  <span class="onoffswitch1-switch"></span>
-			  </label>
-                        </div>
+                        <div class="onoffswitch">
+   <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch" <?php echo $row['PestLvl'] == '0'?'checked':''; ?>>
+   <label class="onoffswitch-label" for="myonoffswitch2">
+     <span class="onoffswitch-inner"></span>
+     <span class="onoffswitch-switch"></span>
+   </label>
+</div> 
 
                     </div>
                     <br><br>
@@ -404,8 +423,7 @@
                             <div class="item">
                                 <div class="name-item">
                                     <h2> Next shedule after:</h2>
-                                    <p class="timer" id="demo1"></p>
-
+                                    <p class="timer" id="demo2"></p>
                                 </div>
                             </div>
 
@@ -414,7 +432,7 @@
                             <div class="item">
                                 <div class="name-item">
                                     <h2>Next Sheduled Time:</h2>
-                                    <label>Mar 28, 2021 15:37:25</label>
+                                    <label></label>
 
                                 </div>
                             </div>
@@ -424,13 +442,13 @@
                             <div class="item">
                                 <div class="name-item days">
                                     <h2>Sheduled Time Gap</h2>
-                                    <label>08:30:00</label>
+                                    <label></label>
 
                                 </div>
                             </div>
                             <br><br>
 
-                            <button class="btn-edit" onclick="myFunction()">Reshedule</button>
+                            <button class="btn-edit" onclick="myFunction()" name="reschedule" value="reschedule">Reshedule</button>
 
                             <br><br><br>
                             <!--Reshedule-->
@@ -439,7 +457,7 @@
                                 <div class="name-item">
                                     <h2>Water Motor Status</h2>
                                     <label class="switch">
-					  <input type="checkbox">
+					  <input type="checkbox" name="onoff" value="on" checked>
 					  <span class="slider round"></span>
 					</label>
 
@@ -449,13 +467,13 @@
                                     <div class="name-item">
                                         <h2>Water Filling Capacity (ml)</h2>
 
-                                        <input type="range" min="0" max="200" value="100" step="1" list="tickmarks" id="rangeInput" oninput="output.value = rangeInput.value">
+                                        <input type="range" min="0" max="200" name="WaterLvl"value="100" step="1" list="tickmarks" id="rangeInput" oninput="output.value = rangeInput.value">
                                         <datalist id="tickmarks">
-							<option value="0 to 50">0</option>
-							<option>50</option>
-							<option>100</option>
-							<option>150</option>
-							<option>200</option>
+							<option name="WaterLvl" value="0">0</option>
+							<option name="WaterLvl"value="50" >50</option>
+							<option name="WaterLvl"value="100" >100</option>
+							<option name="WaterLvl"value="150">150</option>
+							<option name="WaterLvl"value="200">200</option>
 							
 							</datalist>
                                         <output id="output" for="rangeInput">100</output>
@@ -468,21 +486,21 @@
 
                                 <div class="item">
                                     <h2>Reshedule next date:</h2>
-                                    <input type="date" name="name" required/>
+                                    <input type="date" name="date" required/>
                                     <i class="fas fa-calendar-alt"></i>
                                 </div>
                                 <div class="item">
                                     <h2>Reshedule time:</h2>
-                                    <input type="time" name="name" required/>
+                                    <input type="text" name="time" required/>
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div class="item">
                                     <h2>Reshedule time gap:</h2>
-                                    <input type="datetime" name="days" required/>
+                                    <input type="text" name="gap" required/>
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div class="btn-block">
-                                    <button type="submit" href="/">SAVE</button>
+                                <input type="submit"  id="save" name="save" value="SAVE"/>
                                 </div>
                             </div>
                         </form>
@@ -512,7 +530,7 @@
                             <div class="item">
                                 <div class="name-item">
                                     <h2>Next Sheduled Time</h2>
-                                    <label>Mar 28, 2021 15:37:25</label>
+                                    <label></label>
 
                                 </div>
                             </div>
@@ -522,7 +540,7 @@
                             <div class="item">
                                 <div class="name-item days">
                                     <h2>Sheduled Time Gap</h2>
-                                    <label>14 days</label>
+                                    <label></label>
 
                                 </div>
                             </div>
@@ -538,7 +556,7 @@
                                 <div class="name-item">
                                     <h2>Fertilizer Motor Status</h2>
                                     <label class="switch">
-				  <input type="checkbox">
+                                    <input type="checkbox" name="onoff" value="on" checked>
 				  <span class="slider round"></span>
 				</label>
                                 </div>
@@ -547,13 +565,13 @@
                                 <div class="name-item">
                                     <h2>Water Level Capacity (ml)</h2>
 
-                                    <input type="range" min="0" max="200" value="100" step="1" list="tickmarks" id="rangeInput" oninput="output.value = rangeInput.value">
+                                    <input type="range" min="0" max="200"name="PestLvl" value="100" step="1" list="tickmarks" id="rangeInput" oninput="output.value = rangeInput.value">
                                     <datalist id="tickmarks">
-						<option value="0 to 50">0</option>
-						<option>50</option>
-						<option>100</option>
-						<option>150</option>
-						<option>200</option>
+						<option name="PestLvl"value="0">0</option>
+						<option name="PestLvl"value="50">50</option>
+						<option name="PestLvl"value="100">100</option>
+						<option name="PestLvl"value="150">150</option>
+						<option name="PestLvl"value="200">200</option>
 						
 						</datalist>
                                     <output id="output" for="rangeInput">100</output>
@@ -566,23 +584,23 @@
 
                                 <div class="item">
                                     <h2>Reshedule next date:</h2>
-                                    <input type="date" name="name" required/>
+                                    <input type="date" name="date" required/>
                                     <i class="fas fa-calendar-alt"></i>
                                 </div>
 
                                 <div class="item">
                                     <h2>Reshedule time:</h2>
-                                    <input type="time" name="name" required/>
+                                    <input type="text" name="time" required/>
                                     <i class="fas fa-clock"></i>
                                 </div>
 
                                 <div class="item">
                                     <h2>Reshedule time gap:</h2>
-                                    <input type="datetime" name="days" required/>
+                                    <input type="text" name="gap" required/>
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div class="btn-block">
-                                    <button type="submit" href="/">Save</button>
+                                <input type="submit"  id="save" name="save" value="SAVE"/>
                                 </div>
                             </div>
                         </form>
